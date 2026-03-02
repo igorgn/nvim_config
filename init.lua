@@ -246,7 +246,14 @@ vim.api.nvim_create_autocmd({ 'InsertLeave', 'TextChanged' }, {
     local buf = vim.api.nvim_get_current_buf()
     if vim.bo[buf].modified and vim.bo[buf].buftype == '' and vim.bo[buf].modifiable then
       vim.schedule(function()
-        if vim.api.nvim_buf_is_valid(buf) then vim.api.nvim_buf_call(buf, function() vim.cmd 'silent! write' end) end
+        if vim.api.nvim_buf_is_valid(buf) then
+          vim.api.nvim_buf_call(buf, function() vim.cmd 'noautocmd silent! write' end)
+          for _, client in pairs(vim.lsp.get_clients { bufnr = buf }) do
+            client:notify('textDocument/didSave', {
+              textDocument = { uri = vim.uri_from_bufnr(buf) },
+            })
+          end
+        end
       end)
     end
   end,
@@ -438,6 +445,10 @@ require('lazy').setup({
       vim.keymap.set('n', '<leader>s.', builtin.oldfiles, { desc = '[S]earch Recent Files ("." for repeat)' })
       vim.keymap.set('n', '<leader>sc', builtin.commands, { desc = '[S]earch [C]ommands' })
       vim.keymap.set('n', '<leader><leader>', builtin.buffers, { desc = '[ ] Find existing buffers' })
+      vim.keymap.set('n', '<leader>sG', function()
+        local dir = vim.fn.input('Grep in: ', '', 'dir')
+        if dir ~= '' then builtin.live_grep { cwd = dir } end
+      end, { desc = '[G]rep in directory' })
 
       -- This runs on LSP attach per buffer (see main LSP attach function in 'neovim/nvim-lspconfig' config for more info,
       -- it is better explained there). This allows easily switching between pickers if you prefer using something else!
@@ -628,6 +639,7 @@ require('lazy').setup({
         -- clangd = {},
         -- gopls = {},
         -- pyright = {},
+        ts_ls = {},
         rust_analyzer = {},
         --
         -- Some languages (like typescript) have entire language plugins that can be useful:
@@ -910,7 +922,8 @@ require('lazy').setup({
     branch = 'main',
     -- [[ Configure Treesitter ]] See `:help nvim-treesitter-intro`
     config = function()
-      local parsers = { 'rust', 'bash', 'c', 'diff', 'html', 'lua', 'luadoc', 'markdown', 'markdown_inline', 'query', 'vim', 'vimdoc' }
+      local parsers =
+        { 'rust', 'bash', 'javascript', 'typescript', 'tsx', 'c', 'diff', 'html', 'lua', 'luadoc', 'markdown', 'markdown_inline', 'query', 'vim', 'vimdoc' }
       require('nvim-treesitter').install(parsers)
       vim.api.nvim_create_autocmd('FileType', {
         callback = function(args)
