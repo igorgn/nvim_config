@@ -238,6 +238,20 @@ vim.api.nvim_create_autocmd('FileType', {
     vim.cmd 'wincmd T' -- move to a new tab
   end,
 })
+
+-- Autosave
+vim.api.nvim_create_autocmd({ 'InsertLeave', 'TextChanged' }, {
+  group = vim.api.nvim_create_augroup('autosave', { clear = true }),
+  callback = function()
+    local buf = vim.api.nvim_get_current_buf()
+    if vim.bo[buf].modified and vim.bo[buf].buftype == '' and vim.bo[buf].modifiable then
+      vim.schedule(function()
+        if vim.api.nvim_buf_is_valid(buf) then vim.api.nvim_buf_call(buf, function() vim.cmd 'silent! write' end) end
+      end)
+    end
+  end,
+})
+
 -- [[ Install `lazy.nvim` plugin manager ]]
 --    See `:help lazy.nvim.txt` or https://github.com/folke/lazy.nvim for more info
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
