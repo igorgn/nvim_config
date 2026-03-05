@@ -1,6 +1,4 @@
 --[[
-
-=====================================================================
 ==================== READ THIS BEFORE CONTINUING ====================
 =====================================================================
 ========                                    .-----.          ========
@@ -244,7 +242,7 @@ vim.api.nvim_create_autocmd('FileType', {
 })
 
 -- Autosave
-vim.api.nvim_create_autocmd({ 'InsertLeave', 'TextChanged' }, {
+vim.api.nvim_create_autocmd({ 'InsertLeave' }, {
   group = vim.api.nvim_create_augroup('autosave', { clear = true }),
   callback = function()
     local buf = vim.api.nvim_get_current_buf()
