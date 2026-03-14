@@ -185,6 +185,10 @@ vim.diagnostic.config {
   jump = { float = true },
 }
 
+vim.keymap.set('n', 'K', function()
+  vim.lsp.buf.hover { border = 'rounded' }
+end, { desc = 'Hover Documentation' })
+
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
 
 -- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
