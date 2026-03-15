@@ -185,9 +185,7 @@ vim.diagnostic.config {
   jump = { float = true },
 }
 
-vim.keymap.set('n', 'K', function()
-  vim.lsp.buf.hover { border = 'rounded' }
-end, { desc = 'Hover Documentation' })
+vim.keymap.set('n', 'K', function() vim.lsp.buf.hover { border = 'rounded' } end, { desc = 'Hover Documentation' })
 
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
 
@@ -221,6 +219,7 @@ vim.keymap.set('v', 'K', ":m '<-2<CR> gv=gv", { nowait = true })
 vim.keymap.set({ 'n', 'v' }, 'c', '"_c', { noremap = true })
 vim.keymap.set('n', 'C', '"_C', { noremap = true })
 vim.keymap.set('n', '<leader>ao', '<cmd>CopilotChatOpen<CR>', { desc = '[O]pen Copilot Chat' })
+vim.keymap.set('n', '<leader>tb', '<cmd>Gitsigns toggle_current_line_blame<CR>', { desc = '[T]oggle Git [B]lame' })
 -- NOTE: Some terminals have colliding keymaps or are not able to send distinct keycodes
 -- vim.keymap.set("n", "<C-S-h>", "<C-w>H", { desc = "Move window to the left" })
 -- vim.keymap.set("n", "<C-S-l>", "<C-w>L", { desc = "Move window to the right" })
