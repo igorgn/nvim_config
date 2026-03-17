@@ -240,7 +240,7 @@ vim.keymap.set('n', '<leader>ot', '<cmd>ToggleTerm 1<CR>', { desc = '[O]open [T]
 vim.api.nvim_create_autocmd('User', {
   pattern = 'PersistenceSavePre',
   desc = 'Close Neo-tree before saving session with persistence.nvim',
-  callback = function() vim.cmd 'Neotree reveal' end,
+  callback = function() vim.cmd 'Neotree action=show' end,
 })
 
 vim.api.nvim_create_autocmd('WinEnter', {

@@ -26,14 +26,15 @@ return {
       },
     },
   },
-  config = function()
-    require('neo-tree').setup {
-      filesystem = {
-        follow_current_file = {
-          enabled = true,
-          leave_dirs_open = true, -- keeps parent dirs expanded when switching files
-        },
-      },
-    }
-  end,
+  -- Enables dynamic filetree that follows current file
+  -- config = function()
+  --   require('neo-tree').setup {
+  --     filesystem = {
+  --       follow_current_file = {
+  --         enabled = true,
+  --         leave_dirs_open = false, -- keeps parent dirs expanded when switching files
+  --       },
+  --     },
+  --   }
+  -- end,
 }
