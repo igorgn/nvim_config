@@ -218,9 +218,12 @@ vim.keymap.set('v', 'K', ":m '<-2<CR> gv=gv", { nowait = true })
 
 vim.keymap.set({ 'n', 'v' }, 'c', '"_c', { noremap = true })
 vim.keymap.set('n', 'C', '"_C', { noremap = true })
+
 vim.keymap.set('n', '<leader>ao', '<cmd>CopilotChatOpen<CR>', { desc = '[O]pen Copilot Chat' })
 vim.keymap.set('n', '<leader>tb', '<cmd>Gitsigns toggle_current_line_blame<CR>', { desc = '[T]oggle Git [B]lame' })
 vim.keymap.set('n', '<leader>tc', '<cmd>Copilot toggle<CR>', { desc = '[T]oggle [C]opilot' })
+vim.keymap.set('n', '<leader>ot', '<cmd>ToggleTerm 1<CR>', { desc = '[O]open [T]erminal' })
+
 -- NOTE: Some terminals have colliding keymaps or are not able to send distinct keycodes
 -- vim.keymap.set("n", "<C-S-h>", "<C-w>H", { desc = "Move window to the left" })
 -- vim.keymap.set("n", "<C-S-l>", "<C-w>L", { desc = "Move window to the right" })
@@ -234,12 +237,18 @@ vim.keymap.set('n', '<leader>tc', '<cmd>Copilot toggle<CR>', { desc = '[T]oggle 
 --  Try it with `yap` in normal mode
 --  See `:help vim.hl.on_yank()`
 
+vim.api.nvim_create_autocmd('User', {
+  pattern = 'PersistenceSavePre',
+  desc = 'Close Neo-tree before saving session with persistence.nvim',
+  callback = function() vim.cmd 'Neotree reveal' end,
+})
+
 vim.api.nvim_create_autocmd('WinEnter', {
   desc = 'Auto-center cursor when entering LSP hover float',
   callback = function()
     local win = vim.api.nvim_get_current_win()
     local config = vim.api.nvim_win_get_config(win)
-    if config.relative ~= '' then vim.cmd 'normal! L' end
+    if config.relative == 'win' then vim.cmd 'normal! L' end
   end,
 })
 

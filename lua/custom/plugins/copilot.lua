@@ -12,6 +12,7 @@ return {
     'fang2hou/blink-copilot',
     opts = {
       max_completions = 3,
+      border = 'rounded',
     },
   },
 }
