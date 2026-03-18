@@ -223,6 +223,7 @@ vim.keymap.set('n', '<leader>ao', '<cmd>CopilotChatOpen<CR>', { desc = '[O]pen C
 vim.keymap.set('n', '<leader>tb', '<cmd>Gitsigns toggle_current_line_blame<CR>', { desc = '[T]oggle Git [B]lame' })
 vim.keymap.set('n', '<leader>tc', '<cmd>Copilot toggle<CR>', { desc = '[T]oggle [C]opilot' })
 vim.keymap.set('n', '<leader>ot', '<cmd>ToggleTerm 1<CR>', { desc = '[O]open [T]erminal' })
+-- vim.keymap.set('n', '\\', '<cmd>Neotree toggle<CR>', { desc = 'Close Neotree' })
 
 -- NOTE: Some terminals have colliding keymaps or are not able to send distinct keycodes
 -- vim.keymap.set("n", "<C-S-h>", "<C-w>H", { desc = "Move window to the left" })

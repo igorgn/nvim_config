@@ -13,7 +13,7 @@ return {
   },
   lazy = false,
   keys = {
-    { '\\', ':Neotree reveal<CR>', desc = 'NeoTree reveal', silent = true },
+    { '\\', ':Neotree toggle<CR>', desc = 'NeoTree reveal', silent = true },
   },
   ---@module 'neo-tree'
   ---@type neotree.Config
@@ -27,14 +27,14 @@ return {
     },
   },
   -- Enables dynamic filetree that follows current file
-  -- config = function()
-  --   require('neo-tree').setup {
-  --     filesystem = {
-  --       follow_current_file = {
-  --         enabled = true,
-  --         leave_dirs_open = false, -- keeps parent dirs expanded when switching files
-  --       },
-  --     },
-  --   }
-  -- end,
+  config = function()
+    require('neo-tree').setup {
+      filesystem = {
+        follow_current_file = {
+          enabled = true,
+          leave_dirs_open = false, -- keeps parent dirs expanded when switching files
+        },
+      },
+    }
+  end,
 }
