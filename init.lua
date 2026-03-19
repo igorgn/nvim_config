@@ -228,6 +228,17 @@ vim.keymap.set('n', '<leader>tv', function()
   vim.diagnostic.config { virtual_text = not current }
 end, { desc = '[T]oggle [V]irtual diagnostics' })
 
+vim.keymap.set('n', '<leader>tr', function()
+  -- Clear cached lua modules so plugin changes are picked up
+  for name, _ in pairs(package.loaded) do
+    if name:match '^custom' or name:match '^kickstart' then
+      package.loaded[name] = nil
+    end
+  end
+  dofile(vim.env.MYVIMRC)
+  vim.notify('Config reloaded!', vim.log.levels.INFO)
+end, { desc = '[T]oggle [R]eload config' })
+
 -- NOTE: Some terminals have colliding keymaps or are not able to send distinct keycodes
 -- vim.keymap.set("n", "<C-S-h>", "<C-w>H", { desc = "Move window to the left" })
 -- vim.keymap.set("n", "<C-S-l>", "<C-w>L", { desc = "Move window to the right" })
@@ -1017,6 +1028,7 @@ require('lazy').setup({
   -- In normal mode type `<space>sh` then write `lazy.nvim-plugin`
   -- you can continue same window with `<space>sr` which resumes last telescope search
 }, { ---@diagnostic disable-line: missing-fields
+  change_detection = { notify = false },
   ui = {
     -- If you are using a Nerd Font: set icons to an empty table which will use the
     -- default lazy.nvim defined Nerd Font icons, otherwise define a unicode icons table
