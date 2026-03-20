@@ -1,8 +1,8 @@
 return {
-  dir = '/Users/igorgn/Documents/projects/rust/promptline',
+  'igorgn/promptline.nvim',
   config = function()
     require('promptline').setup {
-      backend = 'copilot_chat', -- uses your existing `claude` login
+      backend = 'copilot_chat',
       model = 'auto',
       presets = {
         { label = 'Fix', prompt = 'Fix the issues', mode = 'edit' },

@@ -89,7 +89,7 @@ vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
 -- Set to true if you have a Nerd Font installed and selected in the terminal
-vim.g.have_nerd_font = false
+vim.g.have_nerd_font = true
 
 -- [[ Setting options ]]
 -- See `:help vim.o`
@@ -231,9 +231,7 @@ end, { desc = '[T]oggle [V]irtual diagnostics' })
 vim.keymap.set('n', '<leader>tr', function()
   -- Clear cached lua modules so plugin changes are picked up
   for name, _ in pairs(package.loaded) do
-    if name:match '^custom' or name:match '^kickstart' then
-      package.loaded[name] = nil
-    end
+    if name:match '^custom' or name:match '^kickstart' then package.loaded[name] = nil end
   end
   dofile(vim.env.MYVIMRC)
   vim.notify('Config reloaded!', vim.log.levels.INFO)
