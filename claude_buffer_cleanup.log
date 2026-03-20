@@ -1,0 +1,117 @@
+Checking buffer: 2 with name: 
+Checking buffer: 3 with name: 
+Checking buffer: 4 with name: /Users/igorgn/.config/nvim/neo-tree filesystem [1]
+Checking buffer: 5 with name: /Users/igorgn/.config/nvim/lua/custom/plugins/persistence.lua
+Checking buffer: 6 with name: /Users/igorgn/.config/nvim/init.lua
+Checking buffer: 7 with name: /Users/igorgn/.config/nvim/LICENSE.md
+Checking buffer: 8 with name: health://
+Checking buffer: 9 with name: /Users/igorgn/.config/nvim/lua/custom/plugins/copilot_chat.lua
+Checking buffer: 10 with name: /Users/igorgn/.config/nvim/lua/kickstart/plugins/neo-tree.lua
+Checking buffer: 11 with name: /Users/igorgn/.config/nvim/lua/kickstart/health.lua
+Checking buffer: 12 with name: /Users/igorgn/.config/nvim/lua/custom/plugins/copilot.lua
+Checking buffer: 13 with name: /Users/igorgn/.config/nvim/lua/custom/plugins/toggleterm.lua
+Checking buffer: 14 with name: /Users/igorgn/.config/nvim/lua/kickstart/plugins/indent_line.lua
+Checking buffer: 15 with name: /Users/igorgn/.config/nvim/doc/kickstart.txt
+Checking buffer: 16 with name: /Users/igorgn/.config/nvim/neo-tree filesystem [3]
+Checking buffer: 17 with name: /Users/igorgn/.config/nvim/neo-tree filesystem [4]
+Checking buffer: 18 with name: /Users/igorgn/.config/nvim/lua/custom/plugins/init.lua
+Checking buffer: 20 with name: /Users/igorgn/.config/nvim/lua/custom/plugins/promptline.lua
+Checking buffer: 21 with name: /Users/igorgn/.config/nvim/README.md
+Checking buffer: 22 with name: /Users/igorgn/.config/nvim/claude-code--Users-igorgn--config-nvim
+Found buffer matching 'claude': 22
+Deleting buffer: 22
+Checking buffer: 2 with name: 
+Checking buffer: 3 with name: 
+Checking buffer: 4 with name: /Users/igorgn/.config/nvim/neo-tree filesystem [1]
+Checking buffer: 5 with name: /Users/igorgn/.config/nvim/lua/custom/plugins/persistence.lua
+Checking buffer: 6 with name: /Users/igorgn/.config/nvim/init.lua
+Checking buffer: 7 with name: /Users/igorgn/.config/nvim/LICENSE.md
+Checking buffer: 8 with name: health://
+Checking buffer: 9 with name: /Users/igorgn/.config/nvim/lua/custom/plugins/copilot_chat.lua
+Checking buffer: 10 with name: /Users/igorgn/.config/nvim/lua/kickstart/plugins/neo-tree.lua
+Checking buffer: 11 with name: /Users/igorgn/.config/nvim/lua/kickstart/health.lua
+Checking buffer: 12 with name: /Users/igorgn/.config/nvim/lua/custom/plugins/copilot.lua
+Checking buffer: 13 with name: /Users/igorgn/.config/nvim/lua/custom/plugins/toggleterm.lua
+Checking buffer: 14 with name: /Users/igorgn/.config/nvim/lua/kickstart/plugins/indent_line.lua
+Checking buffer: 15 with name: /Users/igorgn/.config/nvim/doc/kickstart.txt
+Checking buffer: 16 with name: /Users/igorgn/.config/nvim/neo-tree filesystem [3]
+Checking buffer: 17 with name: /Users/igorgn/.config/nvim/neo-tree filesystem [4]
+Checking buffer: 18 with name: /Users/igorgn/.config/nvim/lua/custom/plugins/init.lua
+Checking buffer: 19 with name: /Users/igorgn/.config/nvim/lua/custom/plugins/promptline.lua
+Checking buffer: 20 with name: /Users/igorgn/.config/nvim/README.md
+Checking buffer: 21 with name: term://~/.config/nvim//76751:pushd '/Users/igorgn/.config/nvim' && claude --continue && popd
+Found buffer matching 'claude': 21
+Deleting buffer: 21
+Checking buffer: 2 with name: 
+Checking buffer: 3 with name: 
+Checking buffer: 4 with name: /Users/igorgn/.config/nvim/neo-tree filesystem [1]
+Checking buffer: 5 with name: /Users/igorgn/.config/nvim/lua/custom/plugins/persistence.lua
+Checking buffer: 6 with name: /Users/igorgn/.config/nvim/init.lua
+Checking buffer: 7 with name: /Users/igorgn/.config/nvim/LICENSE.md
+Checking buffer: 8 with name: health://
+Checking buffer: 9 with name: /Users/igorgn/.config/nvim/lua/custom/plugins/copilot_chat.lua
+Checking buffer: 10 with name: /Users/igorgn/.config/nvim/lua/kickstart/plugins/neo-tree.lua
+Checking buffer: 11 with name: /Users/igorgn/.config/nvim/lua/kickstart/health.lua
+Checking buffer: 12 with name: /Users/igorgn/.config/nvim/lua/custom/plugins/copilot.lua
+Checking buffer: 13 with name: /Users/igorgn/.config/nvim/lua/custom/plugins/toggleterm.lua
+Checking buffer: 14 with name: /Users/igorgn/.config/nvim/lua/kickstart/plugins/indent_line.lua
+Checking buffer: 15 with name: /Users/igorgn/.config/nvim/doc/kickstart.txt
+Checking buffer: 16 with name: /Users/igorgn/.config/nvim/neo-tree filesystem [3]
+Checking buffer: 17 with name: /Users/igorgn/.config/nvim/neo-tree filesystem [4]
+Checking buffer: 18 with name: /Users/igorgn/.config/nvim/lua/custom/plugins/init.lua
+Checking buffer: 19 with name: /Users/igorgn/.config/nvim/lua/custom/plugins/promptline.lua
+Checking buffer: 20 with name: /Users/igorgn/.config/nvim/README.md
+Checking buffer: 21 with name: /Users/igorgn/.config/nvim/doc/tags
+Checking buffer: 22 with name: /Users/igorgn/.config/nvim/lazy-lock.json_hidden_message
+Checking buffer: 23 with name: /Users/igorgn/.config/nvim/claude_buffer_cleanup.log
+Found buffer matching 'claude': 23
+Closing window: 1003 for buffer: 23
+Deleting buffer: 23
+Checking buffer: 2 with name: 
+Checking buffer: 3 with name: 
+Checking buffer: 4 with name: /Users/igorgn/.config/nvim/neo-tree filesystem [1]
+Checking buffer: 5 with name: /Users/igorgn/.config/nvim/lua/custom/plugins/persistence.lua
+Checking buffer: 6 with name: /Users/igorgn/.config/nvim/init.lua
+Checking buffer: 7 with name: /Users/igorgn/.config/nvim/LICENSE.md
+Checking buffer: 8 with name: health://
+Checking buffer: 9 with name: /Users/igorgn/.config/nvim/lua/custom/plugins/copilot_chat.lua
+Checking buffer: 10 with name: /Users/igorgn/.config/nvim/lua/kickstart/plugins/neo-tree.lua
+Checking buffer: 11 with name: /Users/igorgn/.config/nvim/lua/kickstart/health.lua
+Checking buffer: 12 with name: /Users/igorgn/.config/nvim/lua/custom/plugins/copilot.lua
+Checking buffer: 13 with name: /Users/igorgn/.config/nvim/lua/custom/plugins/toggleterm.lua
+Checking buffer: 14 with name: /Users/igorgn/.config/nvim/lua/kickstart/plugins/indent_line.lua
+Checking buffer: 15 with name: /Users/igorgn/.config/nvim/doc/kickstart.txt
+Checking buffer: 16 with name: /Users/igorgn/.config/nvim/neo-tree filesystem [3]
+Checking buffer: 17 with name: /Users/igorgn/.config/nvim/neo-tree filesystem [4]
+Checking buffer: 18 with name: /Users/igorgn/.config/nvim/lua/custom/plugins/init.lua
+Checking buffer: 19 with name: /Users/igorgn/.config/nvim/lua/custom/plugins/promptline.lua
+Checking buffer: 20 with name: /Users/igorgn/.config/nvim/README.md
+Checking buffer: 21 with name: /Users/igorgn/.config/nvim/doc/tags
+Checking buffer: 22 with name: /Users/igorgn/.config/nvim/lazy-lock.json_hidden_message
+Checking buffer: 24 with name: term://~/.config/nvim//87320:pushd '/Users/igorgn/.config/nvim' && claude --continue && popd
+Found buffer matching 'claude': 24
+Deleting buffer: 24
+Checking buffer: 2 with name: 
+Checking buffer: 3 with name: 
+Checking buffer: 4 with name: /Users/igorgn/.config/nvim/neo-tree filesystem [1]
+Checking buffer: 5 with name: /Users/igorgn/.config/nvim/lua/custom/plugins/persistence.lua
+Checking buffer: 6 with name: /Users/igorgn/.config/nvim/init.lua
+Checking buffer: 7 with name: /Users/igorgn/.config/nvim/LICENSE.md
+Checking buffer: 8 with name: health://
+Checking buffer: 9 with name: /Users/igorgn/.config/nvim/lua/custom/plugins/copilot_chat.lua
+Checking buffer: 10 with name: /Users/igorgn/.config/nvim/lua/kickstart/plugins/neo-tree.lua
+Checking buffer: 11 with name: /Users/igorgn/.config/nvim/lua/kickstart/health.lua
+Checking buffer: 12 with name: /Users/igorgn/.config/nvim/lua/custom/plugins/copilot.lua
+Checking buffer: 13 with name: /Users/igorgn/.config/nvim/lua/custom/plugins/toggleterm.lua
+Checking buffer: 14 with name: /Users/igorgn/.config/nvim/lua/kickstart/plugins/indent_line.lua
+Checking buffer: 15 with name: /Users/igorgn/.config/nvim/doc/kickstart.txt
+Checking buffer: 16 with name: /Users/igorgn/.config/nvim/neo-tree filesystem [3]
+Checking buffer: 17 with name: /Users/igorgn/.config/nvim/neo-tree filesystem [4]
+Checking buffer: 18 with name: /Users/igorgn/.config/nvim/lua/custom/plugins/init.lua
+Checking buffer: 19 with name: /Users/igorgn/.config/nvim/lua/custom/plugins/promptline.lua
+Checking buffer: 20 with name: /Users/igorgn/.config/nvim/README.md
+Checking buffer: 21 with name: /Users/igorgn/.config/nvim/doc/tags
+Checking buffer: 22 with name: /Users/igorgn/.config/nvim/lazy-lock.json_hidden_message
+Checking buffer: 23 with name: /Users/igorgn/.config/nvim/claude-code--Users-igorgn--config-nvim
+Found buffer matching 'claude': 23
+Deleting buffer: 23

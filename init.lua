@@ -253,8 +253,28 @@ end, { desc = '[T]oggle [R]eload config' })
 vim.api.nvim_create_autocmd('User', {
   pattern = 'PersistenceSavePre',
   desc = 'Close Neo-tree before saving session with persistence.nvim',
-  callback = function() vim.cmd 'Neotree action=show' end,
+  callback = function()
+    vim.cmd 'Neotree action=show'
+    vim.cmd 'ClaudeCode'
+  end,
 })
+
+-- vim.api.nvim_create_autocmd('User', {
+--   pattern = 'PersistenceSavePre',
+--   desc = 'Close Claude Code window before saving session with persistence.nvim',
+--   callback = function()
+--     for _, buf in ipairs(vim.api.nvim_list_bufs()) do
+--       local name = vim.api.nvim_buf_get_name(buf)
+--       if name:match '^claude%-code%-' or name:match 'term://.*claude' then
+--         for _, win in ipairs(vim.fn.win_findbuf(buf)) do
+--           vim.api.nvim_win_close(win, true)
+--         end
+--         vim.api.nvim_buf_delete(buf, { force = true })
+--         break
+--       end
+--     end
+--   end,
+-- })
 
 vim.api.nvim_create_autocmd('WinEnter', {
   desc = 'Auto-center cursor when entering LSP hover float',
@@ -972,8 +992,23 @@ require('lazy').setup({
     branch = 'main',
     -- [[ Configure Treesitter ]] See `:help nvim-treesitter-intro`
     config = function()
-      local parsers =
-        { 'rust', 'bash', 'javascript', 'typescript', 'tsx', 'c', 'diff', 'html', 'lua', 'luadoc', 'markdown', 'markdown_inline', 'query', 'vim', 'vimdoc' }
+      local parsers = {
+        'rust',
+        'bash',
+        'javascript',
+        'typescript',
+        'tsx',
+        'c',
+        'diff',
+        'html',
+        'lua',
+        'luadoc',
+        'markdown',
+        'markdown_inline',
+        'query',
+        'vim',
+        'vimdoc',
+      }
       require('nvim-treesitter').install(parsers)
       vim.api.nvim_create_autocmd('FileType', {
         callback = function(args)
@@ -1013,7 +1048,7 @@ require('lazy').setup({
   -- require 'kickstart.plugins.lint',
   require 'kickstart.plugins.autopairs',
   require 'kickstart.plugins.neo-tree',
-  -- require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
+  require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
 
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
   --    This is the easiest way to modularize your config.
