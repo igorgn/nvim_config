@@ -255,7 +255,17 @@ vim.api.nvim_create_autocmd('User', {
   desc = 'Close Neo-tree before saving session with persistence.nvim',
   callback = function()
     vim.cmd 'Neotree action=show'
-    vim.cmd 'ClaudeCode'
+    -- vim.cmd 'ClaudeCode'
+    for _, buf in ipairs(vim.api.nvim_list_bufs()) do
+      local name = vim.api.nvim_buf_get_name(buf)
+      if name:match 'claude' or name:match 'term://.*claude' then
+        for _, win in ipairs(vim.fn.win_findbuf(buf)) do
+          vim.api.nvim_win_close(win, true)
+        end
+        vim.api.nvim_buf_delete(buf, { force = true })
+        break
+      end
+    end
   end,
 })
 
