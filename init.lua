@@ -1019,7 +1019,7 @@ require('lazy').setup({
         'vim',
         'vimdoc',
       }
-      require('nvim-treesitter').install(parsers)
+      require('nvim-treesitter').install(parsers, { skip_installed = true })
       vim.api.nvim_create_autocmd('FileType', {
         callback = function(args)
           local buf, filetype = args.buf, args.match

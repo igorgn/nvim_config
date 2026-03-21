@@ -1,14 +1,14 @@
 return {
-  -- 'igorgn/promptline.nvim',
-  dir = '/Users/igorgn/Documents/projects/rust/promptline',
+  'igorgn/promptline.nvim',
+  -- dir = '/Users/igorgn/Documents/projects/rust/promptline',
   config = function()
     require('promptline').setup {
       backend = 'copilot_chat',
       model = 'auto',
       presets = {
-        { label = 'Idiomatic', prompt = 'Make more idiomatic Rust', mode = 'edit' },
         { label = 'Fix', prompt = 'Fix the issues', mode = 'edit' },
-        { label = 'Explain', prompt = 'Explain this', mode = 'explain' },
+        { label = 'Explain', prompt = 'Explain what does it do', mode = 'explain' },
+        { label = 'Idiomatic', prompt = 'Make more idiomatic Rust', mode = 'edit' },
       },
     }
   end,
