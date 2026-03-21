@@ -1,6 +1,6 @@
 return {
-  'igorgn/promptline.nvim',
-  -- dir = '/Users/igorgn/Documents/projects/rust/promptline',
+  -- 'igorgn/promptline.nvim',
+  dir = '/Users/igorgn/Documents/projects/rust/promptline',
   config = function()
     require('promptline').setup {
       backend = 'copilot_chat',
