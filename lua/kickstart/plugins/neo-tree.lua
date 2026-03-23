@@ -34,6 +34,11 @@ return {
           enabled = true,
           leave_dirs_open = false, -- keeps parent dirs expanded when switching files
         },
+        filtered_items = {
+          visible = true,
+          hide_dotfiles = false,
+          hide_gitignored = false,
+        },
       },
     }
   end,

@@ -223,6 +223,7 @@ vim.keymap.set('n', '<leader>ao', '<cmd>CopilotChatOpen<CR>', { desc = '[O]pen C
 vim.keymap.set('n', '<leader>tb', '<cmd>Gitsigns toggle_current_line_blame<CR>', { desc = '[T]oggle Git [B]lame' })
 vim.keymap.set('n', '<leader>tc', '<cmd>Copilot toggle<CR>', { desc = '[T]oggle [C]opilot' })
 vim.keymap.set('n', '<leader>ot', '<cmd>ToggleTerm 1<CR>', { desc = '[O]open [T]erminal' })
+vim.keymap.set('n', '<leader>tl', '<cmd>Lazy reload metroscope.nvim<CR>', { desc = 'Reload Metroscope' })
 vim.keymap.set('n', '<leader>tv', function()
   local current = vim.diagnostic.config().virtual_text
   vim.diagnostic.config { virtual_text = not current }
