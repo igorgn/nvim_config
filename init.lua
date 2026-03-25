@@ -224,6 +224,7 @@ vim.keymap.set('n', '<leader>tb', '<cmd>Gitsigns toggle_current_line_blame<CR>',
 vim.keymap.set('n', '<leader>tc', '<cmd>Copilot toggle<CR>', { desc = '[T]oggle [C]opilot' })
 vim.keymap.set('n', '<leader>ot', '<cmd>ToggleTerm 1<CR>', { desc = '[O]open [T]erminal' })
 vim.keymap.set('n', '<leader>tl', '<cmd>Lazy reload metroscope.nvim<CR>', { desc = 'Reload Metroscope' })
+vim.keymap.set('n', '<leader>cp', ':let @+ = expand("%:p")<CR>', { desc = 'Copy absolute file path' })
 vim.keymap.set('n', '<leader>tv', function()
   local current = vim.diagnostic.config().virtual_text
   vim.diagnostic.config { virtual_text = not current }
@@ -512,6 +513,7 @@ require('lazy').setup({
       vim.keymap.set('n', '<leader>sr', builtin.resume, { desc = '[S]earch [R]esume' })
       vim.keymap.set('n', '<leader>s.', builtin.oldfiles, { desc = '[S]earch Recent Files ("." for repeat)' })
       vim.keymap.set('n', '<leader>sc', builtin.commands, { desc = '[S]earch [C]ommands' })
+      vim.keymap.set('n', '<leader>sl', builtin.lsp_document_symbols, { desc = '[L]ist Functions' })
       vim.keymap.set('n', '<leader><leader>', builtin.buffers, { desc = '[ ] Find existing buffers' })
       vim.keymap.set('n', '<leader>sG', function()
         local dir = vim.fn.input('Grep in: ', '', 'dir')
