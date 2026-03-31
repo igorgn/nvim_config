@@ -218,6 +218,7 @@ vim.keymap.set('v', 'K', ":m '<-2<CR> gv=gv", { nowait = true })
 
 vim.keymap.set({ 'n', 'v' }, 'c', '"_c', { noremap = true })
 vim.keymap.set('n', 'C', '"_C', { noremap = true })
+vim.keymap.set('n', 'dd', 'dd', { noremap = true })
 vim.keymap.set({ 'n', 'v' }, 'd', '"_d', { noremap = true })
 vim.keymap.set('n', 'D', '"_D', { noremap = true })
 vim.keymap.set('n', 'x', '"_x', { noremap = true })
