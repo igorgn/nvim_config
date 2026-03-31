@@ -218,6 +218,9 @@ vim.keymap.set('v', 'K', ":m '<-2<CR> gv=gv", { nowait = true })
 
 vim.keymap.set({ 'n', 'v' }, 'c', '"_c', { noremap = true })
 vim.keymap.set('n', 'C', '"_C', { noremap = true })
+vim.keymap.set({ 'n', 'v' }, 'd', '"_d', { noremap = true })
+vim.keymap.set('n', 'D', '"_D', { noremap = true })
+vim.keymap.set('n', 'x', '"_x', { noremap = true })
 
 vim.keymap.set('n', '<leader>ao', '<cmd>CopilotChatOpen<CR>', { desc = '[O]pen Copilot Chat' })
 vim.keymap.set('n', '<leader>tb', '<cmd>Gitsigns toggle_current_line_blame<CR>', { desc = '[T]oggle Git [B]lame' })
